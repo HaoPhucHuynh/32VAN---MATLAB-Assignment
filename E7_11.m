@@ -1,0 +1,1 @@
+%Excersize 7-11: The DFT of a cosine
