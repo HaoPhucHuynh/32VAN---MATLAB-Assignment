@@ -12,11 +12,11 @@ t = (0:Ns - 1) * T_s; %Time array containing N times
 %DFT of a cosine
 f = cos(2 * pi * t * nu_0); %Sample frequency
 F = fft(f);
-nu = (0:Ns-1) * (nu_s / Ns); %Frequency values corresponding to F
+nu = (0:Ns-1) * (nu_s / Ns); %Delta nu with each frequency corresponding to F
 
 %Plot of |F|
 figure(1);
-subplot(2,1,1) %Used to show both the absolute |F| and the following shifted F on the same figure window
+subplot(2,1,1) %Used to show both the absolute |F| and the following shifted |F| on the same figure window
 
 plot(nu, abs(F));
 xlabel('nu (Hz)');
