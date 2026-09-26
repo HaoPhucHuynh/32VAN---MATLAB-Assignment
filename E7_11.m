@@ -37,3 +37,13 @@ xlabel('nu (Hz)');
 ylabel('|F(nu)|');
 title("Shifted DFT spectrum of a cosine.")
 grid on;
+
+%Bottom half plot
+N_half = Ns/2; %Counts only the first half of Ns
+
+figure(2)
+plot(nu(1:N_half), abs(F(1:N_half))); %nu and F must run from the first index to half of N
+xlabel('nu (Hz)');
+ylabel('|F(nu)|');
+title('Bottom half of DFT spectrum.');
+grid on;
