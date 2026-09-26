@@ -1,5 +1,6 @@
 % Exercise 8.14
 
+% Calculations
 f = imread('van_aartsen.jpg'); % creating matrix (f)
 F = fft2(f); % Fourier transform of f (Spectrum of f)
 
@@ -11,10 +12,11 @@ g(1:L, 1:L) = 1; % filling top left L x L pixels with value 1
 G = fft2(g); % Fourier transform of g (spectrum of g)
 
 FG = F .* G; % product of F and G
-f_blurred = real(ifft2(FG));
+f_blurred = real(ifft2(FG)); % Inverse Fourier transform (reconstruction of the image)
 
+% Plotting
 figure;
-subplot(1,2,1);
+subplot(1,2,1); % Displays both images side by side
 imagesc(f)
 axis image;
 title('Original Picture')
