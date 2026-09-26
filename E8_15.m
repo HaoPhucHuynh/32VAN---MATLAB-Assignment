@@ -64,7 +64,7 @@ ylabel('k_y[rad/m]');
 % analytical result (similar to exercise 8.4 in lecture notes):
 % F(kx,ky) = a*sinc(kx*a/2) * b*sinc(ky*b/2)
 % MATLAB's sinc(u) = sin(pi*u)/(pi*u) => add /pi
-A = (a*sinc(kx_s*a/(2*pi))) * (b*sinc(ky_s.'*b/(2*pi)));
+A = (b*sinc(ky_s.'*b/(2*pi))) * (a*sinc(kx_s*a/(2*pi)));
  
 subplot(1,3,3), imagesc(kx_s,ky_s,abs(A));
 axis image;
