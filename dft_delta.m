@@ -12,3 +12,9 @@ F= fft(f)
 
 %calculates the inverse of the DFT of F and defines it as f_check
 f_check= ifft(F)
+
+%creates an array of DFT indices k
+k= 0:N-1;
+
+%calculates the normalised frequency for every index k
+omega_k= 2*pi*k/N
