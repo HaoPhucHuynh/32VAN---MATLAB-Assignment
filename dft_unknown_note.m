@@ -14,10 +14,10 @@ F= fft(f);
 nu= (0:N-1)'*nu_s/N;
 
 %index that marks the middle of the spectrum
-M= floor(N/2);
+H= floor(N/2);
 
 %generates a plot of the magnitude of the bottom half of the spectrum
-plot(nu(1:M), abs(F(1:M)));
+plot(nu(1:H), abs(F(1:H)));
 xlabel('\nu (Hz)');
 ylabel('|F(\nu)|');
 title('Spectrum of the unknown note');
