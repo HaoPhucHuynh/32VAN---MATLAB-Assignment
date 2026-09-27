@@ -1,20 +1,20 @@
 [f nu_s] = audioread('unknown_note.wav');
-% read the wav file: f = samples, nu_s = sample frequency
+%reads the audio file
 
-f = f(:,1);
-% keep only the first channel (in case the file is stereo)
+f= f(:,1);
+%makes the code read only the first channel
 
-N = length(f);
-% N = number of samples in the recording
+N= length(f);
+%sets N as the number of samples in the recording
 
-F = fft(f);
-% calculate the DFT of f
+F= fft(f);
+%calculates the DFT of f
 
-nu = (0:N-1)'*nu_s/N;
+nu= (0:N-1)'*nu_s/N;
 % build the array of frequencies for which F is defined
 
-M = floor(N/2);
-% M = index that marks the middle of the spectrum
+M= floor(N/2);
+%M = index that marks the middle of the spectrum
 
 plot(nu(1:M), abs(F(1:M)));
 xlabel('\nu (Hz)');

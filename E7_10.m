@@ -8,7 +8,7 @@ f(1) = 1;
 %updates the first element of the array to 1
 
 F = fft(f)
-%calculates the digital fourier transform (DFT) of f and defines it as F
+%calculates the dft of f and defines it as F
 
 f_check = ifft(F)
 %calculates the inverse of the DFT of F and defines it as f_check
