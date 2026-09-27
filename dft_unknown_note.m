@@ -20,4 +20,4 @@ H= floor(N/2);
 plot(nu(1:H), abs(F(1:H)));
 xlabel('\nu (Hz)');
 ylabel('|F(\nu)|');
-title('Spectrum of the unknown note');
+title('Audio spectrum for the unknown note');
