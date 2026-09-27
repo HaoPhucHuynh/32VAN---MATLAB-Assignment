@@ -18,6 +18,7 @@ H= floor(N/2);
 
 %generates a plot of the magnitude of the bottom half of the spectrum
 plot(nu(1:H), abs(F(1:H)));
+title('Audio spectrum for the unknown note');
 xlabel('\nu (Hz)');
 ylabel('|F(\nu)|');
-title('Audio spectrum for the unknown note');
+xlim([0 20000]); %i added this to limit the frequencies into the audible range
