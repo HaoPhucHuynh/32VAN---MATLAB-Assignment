@@ -12,7 +12,7 @@ nu = (0:Ns-1) * (nu_s / Ns); % Delta nu with each frequency corresponding to F.
 
 % Plotting
 MaxFreq = 3000;
-x = find(nu <= MaxFreq); % Finding frequencies that are lower than and equal to the maximum frequency
+x = find(nu <= MaxFreq); 
 
 figure(1)
 semilogy(nu(x), P(x));
