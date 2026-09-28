@@ -19,6 +19,7 @@ S = log(abs(FG_shifted) + 1); % Logarithmic compression for display
 
 % Plotting
 figure;
+colormap('gray');
 subplot(1,2,1); % Displays both images side by side
 imagesc(f)
 axis image;
@@ -28,3 +29,8 @@ subplot(1,2,2)
 imagesc(f_blurred);
 axis image
 title('Smooth picture')
+
+figure;
+imagesc(S);
+axis image;
+title('Centered Spectrum log(|FG| + 1)');
