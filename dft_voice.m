@@ -1,18 +1,18 @@
-%Excersize 7-13: Experiments on a human voice
+% Exercise 7-13: Experiments on a human voice
 
-%Reading the audio file
+% Read the audio file.
 [f, nu_s] = audioread("a_low.wav");
-f = f(:,1); %Ensuring single channel
+f = f(:,1); % Isolate a single channel.
 
-%Calculating Fourier and power spectrum
-Ns = length(f); %Aquired samples
+% Calculate the Fourier and power spectrum.
+Ns = length(f); % Acquire samples
 F = fft(f);
-P = abs(F).^2; %Dot required as each value is being squared
-nu = (0:Ns-1) * (nu_s / Ns); %Delta nu with each frequency corresponding to F
+P = abs(F).^2; % A "." is required in order to square each value individually. 
+nu = (0:Ns-1) * (nu_s / Ns); % Delta nu with each frequency corresponding to F.
 
-%Plotting
+% Plotting
 MaxFreq = 3000;
-x = find(nu <= MaxFreq); %Finding frequencies that are lower than and equal to the maximum frequency
+x = find(nu <= MaxFreq); % Finding frequencies that are lower than and equal to the maximum frequency
 
 figure(1)
 semilogy(nu(x), P(x));
