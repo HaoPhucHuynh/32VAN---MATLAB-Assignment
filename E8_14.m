@@ -14,6 +14,9 @@ G = fft2(g); % Fourier transform of g (spectrum of g)
 FG = F .* G; % Product of F and G
 f_blurred = real(ifft2(FG)); % Inverse Fourier transform (reconstruction of the image)
 
+FG_shifted = fftshift(FG); % Magnitude spectrum FG
+S = log(abs(FG_shifted) + 1); % Logarithmic compression for display
+
 % Plotting
 figure;
 subplot(1,2,1); % Displays both images side by side
